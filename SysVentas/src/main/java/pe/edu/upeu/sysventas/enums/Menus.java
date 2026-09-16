@@ -6,6 +6,5 @@ public enum Menus {
     COMPRAS,
     CLIENTES,
     PRODUCTOS,
-    USARIOS;
-
+    USUARIOS;
 }

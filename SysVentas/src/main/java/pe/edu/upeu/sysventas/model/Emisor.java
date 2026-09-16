@@ -11,7 +11,7 @@ public class Emisor {
     String nombreComercial;
     String ubigeo;
     String domicilioFiscal;
-    String urvanizacion;
+    String urbanizacion;
     String departamento;
     String provincia;
     String distrito;

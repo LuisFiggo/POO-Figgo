@@ -11,4 +11,5 @@ public class Acceso {
     String menuItemNombre;
     Menus menuNombre;
     TipoTab nombreTab;
+
 }
