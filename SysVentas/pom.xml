@@ -68,13 +68,12 @@
             <artifactId>hibernate-validator</artifactId>
             <version>8.0.3.Final</version>
         </dependency>
-
+        <!-- Source: https://mvnrepository.com/artifact/jakarta.validation/jakarta.validation-api -->
         <dependency>
             <groupId>jakarta.validation</groupId>
             <artifactId>jakarta.validation-api</artifactId>
             <version>3.0.2</version>
         </dependency>
-
         <!-- Source: https://mvnrepository.com/artifact/org.glassfish.expressly/expressly -->
         <dependency>
             <groupId>org.glassfish.expressly</groupId>
@@ -97,7 +96,6 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
-
                             <version>1.18.46</version>
                         </path>
                     </annotationProcessorPaths>

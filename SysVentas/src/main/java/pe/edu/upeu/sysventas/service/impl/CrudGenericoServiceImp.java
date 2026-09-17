@@ -1,25 +1,25 @@
 package pe.edu.upeu.sysventas.service.impl;
 
-import pe.edu.upeu.sysventas.exeption.ModelNotFoundException;
-import pe.edu.upeu.sysventas.repository.IcrudGenericoRepository;
+import pe.edu.upeu.sysventas.exception.ModelNotFoundException;
+import pe.edu.upeu.sysventas.repository.ICrudGenericoRepository;
 import pe.edu.upeu.sysventas.service.ICrudGenericoService;
 
 import java.util.List;
 
-public abstract class CrudGenericoServiceImp<T ,ID> implements ICrudGenericoService<T, ID> {
-    protected abstract IcrudGenericoRepository<T, ID> getRepo();
+public abstract class CrudGenericoServiceImp<T,ID> implements ICrudGenericoService<T, ID> {
+    protected abstract ICrudGenericoRepository<T,ID> getRepo();
 
     @Override
-    public T sava(T entity) {
+    public T save(T entity) {
         return getRepo().save(entity);
     }
 
     @Override
     public T update(ID id, T entity) {
-        if (getRepo().existsById(id)){
+        if(!getRepo().existsById(id)){
             throw new ModelNotFoundException("ID no existe:"+id);
         }
-        return null;
+        return getRepo().update(entity);
     }
 
     @Override
@@ -34,8 +34,8 @@ public abstract class CrudGenericoServiceImp<T ,ID> implements ICrudGenericoServ
 
     @Override
     public void delete(ID id) {
-        if (getRepo().existsById(id)) {
-            throw new ModelNotFoundException("ID no existe:" + id);
+        if(!getRepo().existsById(id)){
+            throw new ModelNotFoundException("ID no existe:"+id);
         }
         getRepo().deleteById(id);
     }

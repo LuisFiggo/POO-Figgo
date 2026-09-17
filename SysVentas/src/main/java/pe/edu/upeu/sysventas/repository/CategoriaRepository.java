@@ -4,8 +4,9 @@ import pe.edu.upeu.sysventas.model.Categoria;
 
 public class CategoriaRepository extends AbstractJpaRepository<Categoria, Long>{
     private long sequence=1;
+
     @Override
-    protected Long getID(Categoria entity) {
+    protected Long getId(Categoria entity) {
         return entity.getIdCategoria();
     }
 

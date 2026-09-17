@@ -5,7 +5,7 @@ import pe.edu.upeu.sysventas.model.Marca;
 public class MarcaRepository extends AbstractJpaRepository<Marca,Long> {
     private long sequence=1;
     @Override
-    protected Long getID(Marca entity) {
+    protected Long getId(Marca entity) {
         return entity.getIdMarca();
     }
 
