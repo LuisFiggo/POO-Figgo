@@ -4,8 +4,6 @@ import lombok.*;
 
 @Setter
 @Getter
-@Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class UnidMedida {
