@@ -19,7 +19,7 @@ public class SysVentas extends Application {
         fxmlLoader.setControllerFactory(appContext::getBean);
         Rectangle2D dimension=screen.getBounds();
 
-        Scene scene = new Scene(fxmlLoader.load(), dimension.getWidth(), dimension.getHeight()-60);
+        Scene scene = new Scene(fxmlLoader.load(), dimension.getWidth()-1400, dimension.getHeight()-600);
         scene.getStylesheets().add(getClass().getResource("/css/style.css").toExternalForm());
         stage.setTitle("Hello!");
         stage.setScene(scene);
